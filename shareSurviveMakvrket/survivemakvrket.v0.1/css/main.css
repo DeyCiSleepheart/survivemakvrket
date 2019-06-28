@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  padding:20px 0;
+  margin:0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.1em;
+  margin:10px 0 0 0;
+}
+h3 {
+  margin:10px 0;
+  font-size: 0.8em;
+  font-weight:normal;
+}
+h4 {
+  text-decoration: underline;
+  font-size: 2em;
+
+}
+h4:hover {
+  color: purple;
+}
+p {
+  margin:10px 0;
+  font-size: 0.8em;
+}
+a {
+  text-decoration: none;
+  color:black;
+}
+
+
+main {
+  width: 300px;
+  margin:0 auto;
+}
+
+section {
+  width: 300px;
+  margin:0 auto;
+  height: 50px;
+  max-height: 50px;
+}
+
+article {
+  margin:10px 0 0 0;
+  width:100%;
+}
+
+/* .container contains the frame and all the arrows */
+.container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.frame {
+  width: 280px;
+  height:400px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-color: black;
+  margin:0 auto;
+  border:5px solid black;
+  background-position: center;
+
+}
+
+
+
+
+.frame_1 {
+background-image: url("../img/first.jpg");
+
+}
+.frame_2 {
+background-image: url("../img/frontentrance.jpg");
+}
+.frame_3 {
+background-image: url("../img/foyer-1.jpg");
+
+}
+.frame_4 {
+background-image: url("../img/foyer-2.jpg");
+
+}
+.frame_5 {
+background-image: url("../img/btw-horse-and-metal.jpg");
+
+}
+
+
+/* --------ARROWS------ */
+/* .arrow_container {
+  position: relative;
+  top:-400px;
+  left:54%;
+  z-index: 10;
+} */
+
+.arrow_container_frame1N {
+  position: relative;
+  top:-400px;
+  left:54%;
+}
+.arrow_container_frame1NW {
+  position: relative;
+  top:-210px;
+  left:47%;
+}
+.arrow_container_frame2N {
+  position: relative;
+  top:-380px;
+  left:44%;
+}
+
+.arrow_container_frame2NW {
+  position: relative;
+  top:-125px;
+  left:30%;
+}
+.arrow_container_frame2S {
+  position: relative;
+  top:-110px;
+  left:34%;
+}
+.arrow_container_frame3N {
+  position: relative;
+  top:-330px;
+  left:78%;
+}
+.arrow_container_frame3NW {
+  position: relative;
+  top:-210px;
+  left:20%;
+}
+.arrow_container_frame3W {
+  position: relative;
+  top:-420px;
+  left:50%;
+}
+.arrow_container_frame3NE {
+  position: relative;
+  top:-80px;
+  left:60%;
+}
+.arrow_container_frame3S {
+position: relative;
+top:-100px;
+left:40%;
+}
+.arrow_container_frame4W {
+position: relative;
+top:-120px;
+left:10%;
+}
+.arrow_container_frame4NE {
+position: relative;
+top:-270px;
+left: 10%;
+}
+.arrow_container_frame4E {
+position: relative;
+top:-200px;
+left:25%;
+}
+
+.arrow {
+display: none;
+position:relative;
+}
+
+.arrowdisplay {
+  display: block;
+}
+  /* clip: rect(top, right, bottom, left);  */
+#arrow_N {
+  position: absolute;
+  clip: rect(0, 60px, 30px, 30px);
+
+}
+#arrow_S {
+  position: absolute;
+  clip: rect(60px, 60px, 90px, 30px);
+}
+#arrow_E {
+  position: absolute;
+  clip: rect(30px, 90px, 60px, 60px);
+}
+#arrow_W {
+  position: absolute;
+  clip: rect(30px, 30px, 60px, 0px);
+}
+#arrow_NE {
+  position: absolute;
+  clip: rect(0, 90px, 30px, 60px);
+}
+#arrow_NW {
+  position: absolute;
+  clip: rect(0, 30px, 30px, 0px);
+}
+#arrow_SE {
+  position: absolute;
+  clip: rect(60px, 90px, 90px, 60px);
+}
+#arrow_SW {
+  position: absolute;
+  clip: rect(60px, 30px, 90px, 0px);
+}
+/* ---------ARROWS ENDING------- */
+
+/* ----------- Speech and action bubbles ---------- */
+
+button {
+  border: none;
+  margin:0 auto;
+  display:block;
+}
+.action_container {
+  /* display: flex; */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+/* .action_container > * {
+  margin: 10px;
+} */
+
+.action {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background: black;
+  border-radius: 10px;
+  color: #FFF;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin:10px auto 5px;
+}
+
+.talk_action {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background: black;
+  border-radius: 10px;
+  color: #FFF;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin:10px auto;
+  padding:0 5px;
+}
+.talk_action:before {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  content: '';
+  border-top: 10px solid black;
+  border-left: 5px solid transparent;
+  border-right: 12px solid transparent;
+}
+
+/* ----------- Speech and action bubbles ENDING ---------- */
+
+/* ------ frame_NaN specifics ----- */
+
+
+#frame_NaN {
+  text-align: center;
+
+}
+
+#frame_NaN h1 {
+  line-height:1;
+  border: 10px solid black;
+  border-radius:3px;
+  padding: 0 0 15px;
+  font-weight:bold;
+  background: firebrick;
+  width:200px;
+  margin:0 auto;
+}
+
+.line1 {
+  font-size: 60px;
+  padding-left:5px;
+}
+.line2 {
+  font-size: 35px;
+}
+.line3 {
+  font-size: 30px;
+}
+.line4 {
+  font-size: 35px;
+}
+
+#frame_NaN h2 {
+  margin: 15px 0 0 0;
+  font-size: 1.7em;
+  font-weight:bold;
+}
+
+#frame_NaN h3 {
+  font-size: 1.1em;
+}
+#frame_NaN h3 a {
+  font-size: 1.12em;
+  font-weight: bold;
+  color:purple;
+  line-height: 2;
+}
+
+#frame_NaN a h2 {
+  margin:25px 0 0 0;
+  padding: 0 0 15px;
+  border: 10px solid black;
+  border-radius:3px;
+  background: firebrick;
+  color:whitesmoke;
+  text-decoration:none;
+}
+#frame_NaN a h2:hover {
+  color:black;
+}
+#frame_NaN a h2 span {
+  display: block;
+  font-size: 2em;
+}

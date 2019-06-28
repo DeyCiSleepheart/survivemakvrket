@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <title>Survive Makvärket testspil</title>
+</head>
+<body>
+
+  <header>
+<h1><a href="../index.html">Survive Makvärket</a></h1>
+
+  </header>
+  <iframe src="../audio/silence.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+  </iframe>
+
+  <audio autoplay loop id="folkdersnakker">
+    <source src="../audio/test_snakkelyde.mp3"  type="audio/mpeg">
+    <source src="../audio/test_snakkelyde.mp3"  type="audio/mp3">
+
+      <p>your browser does not support HTML5 audio</p>
+  </audio>
+
+  <div class="container">
+      <div class="frame frame_3">
+<!-- has the location as a background picture -->
+      </div>
+
+<!-- ******* ARROWS *********-->
+      <div class="arrow_container_frame3N">
+        <a href="frame_NaN.html">
+          <img id="arrow_N" class="arrowdisplay arrow arrow_N 1aN" class="arrow" src="../img/arrows_grid.svg" width="90" alt="arrow icon"/>
+        </a>
+      </div>
+
+
+      <div class="arrow_container_frame3NE">
+
+        <a href="frame_4.html">
+          <img id="arrow_NE" class="arrowdisplay arrow" src="../img/arrows_grid.svg" width="90" alt="arrow icon"/>
+        </a>
+      </div>
+
+      <div class="arrow_container_frame3NW">
+        <a href="frame_NaN.html">
+          <img id="arrow_NW" class="arrowdisplay arrow" src="../img/arrows_grid.svg" width="90" alt="arrow icon"/>
+        </a>
+      </div>
+
+      <div class="arrow_container_frame3W">
+        <a href="frame_NaN.html" >
+          <img id="arrow_W" class="arrowdisplay arrow" src="../img/arrows_grid.svg" width="90" alt="arrow icon"/>
+        </a>
+      </div>
+
+      <div class="arrow_container_frame3S">
+      <a href="frame_2.html">
+        <img id="arrow_S" class="arrowdisplay arrow" class="arrow" src="../img/arrows_grid.svg" width="90" alt="arrow icon"/></a>
+      </div>
+  <article><h3>You step inside a warm foyer people are chatting and the food smells even better in here.</h3></article>
+  </div>
+
+<!-- ******* ARROWS ENDING *********-->
+
+<button onclick="turnOffAmbientSound()" type="button" id="sound_on" class="talk_action">Shout loudly that people should shut up!</button>
+<button onclick="turnOnAmbientSound()" type="button" id="sound_off" class="talk_action" style="display:none;">Say "Sorry, you didn't mean it that way".</button>
+
+<script>
+
+var sound = document.getElementById("folkdersnakker");
+
+function turnOffAmbientSound() {
+    sound.muted = true;
+    document.getElementById("sound_on").style.display = "none";
+    document.getElementById("sound_off").style.display = "block";
+}
+
+function turnOnAmbientSound() {
+    sound.muted = false;
+    document.getElementById("sound_on").style.display = "block";
+    document.getElementById("sound_off").style.display = "none";
+}
+
+
+
+</script>
+
+
+<script src="js/dontpanic.js">
+
+
+</script>
+</body>
+</html>

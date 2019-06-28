@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <title>Survive Makvärket testspil</title>
+</head>
+<body>
+
+  <header>
+<h1><a href="../index.html">Survive Makvärket</a></h1>
+  </header>
+
+  <div class="container">
+    <div class="frame frame_4">
+    <!-- has the location as a background picture -->
+    </div>
+  <!-- ******* ARROWS *********-->
+    <div class="arrow_container_frame4NE">
+      <a href="frame_NaN.html">
+        <img id="arrow_NE" class="arrowdisplay arrow" src="../img/arrows_grid.svg" width="90" alt="arrow icon"/>
+      </a>
+    </div>
+
+    <div class="arrow_container_frame4W">
+      <a href="frame_3.html">
+        <img id="arrow_W" class="arrowdisplay arrow" src="../img/arrows_grid.svg" width="90" alt="arrow icon"/>
+      </a>
+    </div>
+
+    <div class="arrow_container_frame4E">
+      <a href="frame_NaN.html">
+        <img id="arrow_E"class="arrowdisplay arrow" src="../img/arrows_grid.svg" width="90" alt="arrow icon"/>
+      </a>
+    </div>
+    <article><h3>Yellow Banana (by Hang on the box) just started playing from a small stereo on the counter to the kitchen and among steamy pots the awsome and relaxed chefs are clearly enjoying hanging out, dance-cooking while chopping vegetables.</h3></article>
+  <!-- ******* ARROWS ENDING *********-->
+  </div>
+<div class="action_container">
+
+  <button onclick="turnOffRadioSound()" type="button" id="radio_on" class="action">Turn off the radio.</button>
+
+  <button onclick="turnOnRadioSound()" type="button" id="radio_off" class="action" style="display:none;">Turn on the radio again.</button>
+  <!-- turnOnRadioSound() only visible when turnOffRadioSound() is active and vice versa -->
+
+  <button onclick="turnOffAmbientSound()" type="button" id="sound_on" class="talk_action">Shout loudly that people should shut up!</button>
+  <button onclick="turnOnAmbientSound()" type="button" id="sound_off" class="talk_action" style="display:none;">Say "Sorry, you didn't mean it that way".</button>
+
+  <iframe src="../audio/silence.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+  </iframe>
+
+<audio autoplay loop id="radiomusik">
+    <source src="../audio/test_YellowBanana.mp3"   type="audio/mpeg">
+    <source src="../audio/test_YellowBanana.mp3"   type="audio/mp3">
+
+    <p>your browser does not support HTML% audio</p>
+</audio>
+
+<audio autoplay loop id="folkdersnakker">
+  <source src="../audio/test_snakkelyde.mp3"  type="audio/mpeg">
+  <source src="../audio/test_snakkelyde.mp3"  type="audio/mp3">
+
+    <p>your browser does not support HTML5 audio</p>
+</audio>
+  <script>
+
+  var musik = document.getElementById("radiomusik");
+  var sound = document.getElementById("folkdersnakker");
+
+  function turnOffRadioSound() {
+      musik.muted = true;
+      document.getElementById("radio_on").style.display = "none";
+      document.getElementById("radio_off").style.display = "block";
+  }
+
+  function turnOnRadioSound() {
+      musik.muted = false;
+      document.getElementById("radio_on").style.display = "block";
+      document.getElementById("radio_off").style.display = "none";
+  }
+
+  function turnOffAmbientSound() {
+      sound.muted = true;
+      document.getElementById("sound_on").style.display = "none";
+      document.getElementById("sound_off").style.display = "block";
+  }
+
+  function turnOnAmbientSound() {
+      sound.muted = false;
+      document.getElementById("sound_on").style.display = "block";
+      document.getElementById("sound_off").style.display = "none";
+  }
+
+
+
+  </script>
+
+<script src="js/dontpanic.js">
+
+
+</script>
+</body>
+</html>
